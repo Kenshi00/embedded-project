@@ -1,0 +1,463 @@
+
+09.PWM_SERVO_PIEZO_BUZZER.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000104  00800100  00000260  000002f4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000260  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  00800204  00800204  000003f8  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000003f8  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000428  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000090  00000000  00000000  00000468  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001240  00000000  00000000  000004f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000b22  00000000  00000000  00001738  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000753  00000000  00000000  0000225a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000ec  00000000  00000000  000029b0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000005e8  00000000  00000000  00002a9c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000005d6  00000000  00000000  00003084  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000060  00000000  00000000  0000365a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	12 e0       	ldi	r17, 0x02	; 2
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e0 e6       	ldi	r30, 0x60	; 96
+  a0:	f2 e0       	ldi	r31, 0x02	; 2
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a4 30       	cpi	r26, 0x04	; 4
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	22 e0       	ldi	r18, 0x02	; 2
+  b4:	a4 e0       	ldi	r26, 0x04	; 4
+  b6:	b2 e0       	ldi	r27, 0x02	; 2
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a8 30       	cpi	r26, 0x08	; 8
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	44 d0       	rcall	.+136    	; 0x14c <main>
+  c4:	cb c0       	rjmp	.+406    	; 0x25c <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <init_button>:
+int get_button(int button_num, int button_pin);
+
+// Î≤ÑÌäº Ï¥àÍ∏∞Ìôî Î∞©Ìñ•ÏÑ§Ï†ï(ÏûÖÎ†•) 
+void init_button(void)
+{
+	BUTTON_DDR &= ~(1 << BUTTON0PIN | 1 << BUTTON1PIN | 1 << BUTTON2PIN | 1 << BUTTON3PIN);
+  c8:	81 b3       	in	r24, 0x11	; 17
+  ca:	87 78       	andi	r24, 0x87	; 135
+  cc:	81 bb       	out	0x11, r24	; 17
+  ce:	08 95       	ret
+
+000000d0 <get_button>:
+	};
+	// static ÏßÄÏó≠Î≥ÄÏàòÏóê staticÏùÑ ÏÑ†Ïñ∏ÌïòÎ©¥ Ìï®ÏàòÎ•º Îπ†Ï†∏ÎÇòÏôÄ Îã§Ïãú Îì§Ïñ¥Í∞ÄÎèÑ Ïù¥Ï†ÑÍ∞íÏú†ÏßÄ 
+	int current_state;
+	
+	// 1. buttonÏùÑ ÏùΩÎäîÎã§. 
+	current_state = BUTTON_PIN & (1 << button_pin);
+  d0:	20 b3       	in	r18, 0x10	; 16
+  d2:	42 2f       	mov	r20, r18
+  d4:	50 e0       	ldi	r21, 0x00	; 0
+  d6:	21 e0       	ldi	r18, 0x01	; 1
+  d8:	30 e0       	ldi	r19, 0x00	; 0
+  da:	02 c0       	rjmp	.+4      	; 0xe0 <get_button+0x10>
+  dc:	22 0f       	add	r18, r18
+  de:	33 1f       	adc	r19, r19
+  e0:	6a 95       	dec	r22
+  e2:	e2 f7       	brpl	.-8      	; 0xdc <get_button+0xc>
+  e4:	24 23       	and	r18, r20
+  e6:	35 23       	and	r19, r21
+	// 2. Î≤ÑÌäº ÏÉÅÌÉú check 
+	if (current_state  && button_status[button_num] == BUTTON_RELEASE)  // Î≤ÑÌäºÏù¥ Ï≤òÏùå ÎàåÎ†§ÏßÑ ÏÉÅÌÉú 
+  e8:	21 15       	cp	r18, r1
+  ea:	31 05       	cpc	r19, r1
+  ec:	a1 f0       	breq	.+40     	; 0x116 <get_button+0x46>
+  ee:	fc 01       	movw	r30, r24
+  f0:	ec 5f       	subi	r30, 0xFC	; 252
+  f2:	fd 4f       	sbci	r31, 0xFD	; 253
+  f4:	40 81       	ld	r20, Z
+  f6:	41 11       	cpse	r20, r1
+  f8:	0e c0       	rjmp	.+28     	; 0x116 <get_button+0x46>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  fa:	ef e5       	ldi	r30, 0x5F	; 95
+  fc:	fa ee       	ldi	r31, 0xEA	; 234
+  fe:	31 97       	sbiw	r30, 0x01	; 1
+ 100:	f1 f7       	brne	.-4      	; 0xfe <get_button+0x2e>
+ 102:	00 c0       	rjmp	.+0      	; 0x104 <get_button+0x34>
+ 104:	00 00       	nop
+	{
+		_delay_ms(15);  // noiseÍ∞Ä ÏßÄÎÇòÍ∞ÄÍ∏∞Î•º Í∏∞Îã§Î¶∞Îã§. 
+		button_status[button_num] =BUTTON_PRESS;  
+ 106:	fc 01       	movw	r30, r24
+ 108:	ec 5f       	subi	r30, 0xFC	; 252
+ 10a:	fd 4f       	sbci	r31, 0xFD	; 253
+ 10c:	21 e0       	ldi	r18, 0x01	; 1
+ 10e:	20 83       	st	Z, r18
+		return 0;     // ÏïÑÏßÅÏùÄ ÏôÑÏ†ÑÌûà ÎàåÎ†ÄÎã§ ÎóÄ ÏÉÅÌÉúÍ∞Ä ÏïÑÎãàÎã§. 
+ 110:	80 e0       	ldi	r24, 0x00	; 0
+ 112:	90 e0       	ldi	r25, 0x00	; 0
+ 114:	08 95       	ret
+	}
+	else if (button_status[button_num] == BUTTON_PRESS && current_state == BUTTON_RELEASE)
+ 116:	fc 01       	movw	r30, r24
+ 118:	ec 5f       	subi	r30, 0xFC	; 252
+ 11a:	fd 4f       	sbci	r31, 0xFD	; 253
+ 11c:	40 81       	ld	r20, Z
+ 11e:	41 30       	cpi	r20, 0x01	; 1
+ 120:	79 f4       	brne	.+30     	; 0x140 <get_button+0x70>
+ 122:	23 2b       	or	r18, r19
+ 124:	81 f4       	brne	.+32     	; 0x146 <get_button+0x76>
+	{  // Î≤ÑÌäºÏù¥ Ïù¥Ï†ÑÏóê ÎàåÎ†§ÏßÑ ÏÉÅÌÉúÏòÄÏúºÎ©∞ ÏßÄÍ∏àÏùÄ ÎñºÏñ¥ÏßÑ ÏÉÅÌÉú 
+		button_status[button_num] = BUTTON_RELEASE;   // Îã§Ïùå Î≤ÑÌäºÏùÑ Ï≤¥ÌÅ¨ ÌïòÍ∏∞ ÏúÑÌïòÏó¨ Ï¥àÍ∏∞Ìôî
+ 126:	fc 01       	movw	r30, r24
+ 128:	ec 5f       	subi	r30, 0xFC	; 252
+ 12a:	fd 4f       	sbci	r31, 0xFD	; 253
+ 12c:	10 82       	st	Z, r1
+ 12e:	8f e5       	ldi	r24, 0x5F	; 95
+ 130:	9a ee       	ldi	r25, 0xEA	; 234
+ 132:	01 97       	sbiw	r24, 0x01	; 1
+ 134:	f1 f7       	brne	.-4      	; 0x132 <get_button+0x62>
+ 136:	00 c0       	rjmp	.+0      	; 0x138 <get_button+0x68>
+ 138:	00 00       	nop
+		_delay_ms(15);  // noiseÍ∞Ä ÏßÄÎÇòÍ∞ÄÍ∏∞Î•º Í∏∞Îã§Î¶∞Îã§. 
+		return 1;   // ÏôÑÏ†ÑÌûà 1Î≤à ÎàåÎ†ÄÎã§ ÎóÄ ÏÉÅÌÉúÎ°ú Ïù∏Ï†ï ÌïúÎã§. 
+ 13a:	81 e0       	ldi	r24, 0x01	; 1
+ 13c:	90 e0       	ldi	r25, 0x00	; 0
+ 13e:	08 95       	ret
+	}
+	
+	return 0;   // Î≤ÑÌäºÏù¥ open ÏÉÅÌÉú Ïù¥Îã§. 
+ 140:	80 e0       	ldi	r24, 0x00	; 0
+ 142:	90 e0       	ldi	r25, 0x00	; 0
+ 144:	08 95       	ret
+ 146:	80 e0       	ldi	r24, 0x00	; 0
+ 148:	90 e0       	ldi	r25, 0x00	; 0
+}
+ 14a:	08 95       	ret
+
+0000014c <main>:
+// 16bit Timer/Counter
+// OCR3AÍ∞íÏù¥ Í∞ôÏïÑÏßÄÎ©¥ Low Ï∂úÎ†•.
+
+int main(void)
+{
+	init_speaker();	
+ 14c:	77 d0       	rcall	.+238    	; 0x23c <init_speaker>
+	init_button();
+ 14e:	bc df       	rcall	.-136    	; 0xc8 <init_button>
+ 150:	63 e0       	ldi	r22, 0x03	; 3
+	
+	while(1)
+	{
+		// btn0ÏùÑ ÎàÑÎ•¥Î©¥ 1Î≤à ÎèôÏûë
+		if(get_button(BUTTON0, BUTTON0PIN) == BUTTON_PRESS) {
+ 152:	70 e0       	ldi	r23, 0x00	; 0
+ 154:	80 e0       	ldi	r24, 0x00	; 0
+ 156:	90 e0       	ldi	r25, 0x00	; 0
+ 158:	bb df       	rcall	.-138    	; 0xd0 <get_button>
+ 15a:	01 97       	sbiw	r24, 0x01	; 1
+ 15c:	71 f4       	brne	.+28     	; 0x17a <main+0x2e>
+ 15e:	6a ef       	ldi	r22, 0xFA	; 250
+			Music_Player(power_on_melody_Tune, (int*)power_on_melody_Beats);
+ 160:	71 e0       	ldi	r23, 0x01	; 1
+ 162:	88 e7       	ldi	r24, 0x78	; 120
+ 164:	91 e0       	ldi	r25, 0x01	; 1
+ 166:	42 d0       	rcall	.+132    	; 0x1ec <Music_Player>
+ 168:	2f ef       	ldi	r18, 0xFF	; 255
+ 16a:	8a e6       	ldi	r24, 0x6A	; 106
+ 16c:	93 e0       	ldi	r25, 0x03	; 3
+ 16e:	21 50       	subi	r18, 0x01	; 1
+ 170:	80 40       	sbci	r24, 0x00	; 0
+ 172:	90 40       	sbci	r25, 0x00	; 0
+ 174:	e1 f7       	brne	.-8      	; 0x16e <main+0x22>
+ 176:	00 c0       	rjmp	.+0      	; 0x178 <main+0x2c>
+ 178:	00 00       	nop
+ 17a:	64 e0       	ldi	r22, 0x04	; 4
+			_delay_ms(70);
+		}
+		
+		// btn1ÏùÑ ÎàÑÎ•¥Î©¥ 1Î≤à ÎèôÏûë
+		if(get_button(BUTTON1, BUTTON1PIN) == BUTTON_PRESS) {
+ 17c:	70 e0       	ldi	r23, 0x00	; 0
+ 17e:	81 e0       	ldi	r24, 0x01	; 1
+ 180:	90 e0       	ldi	r25, 0x00	; 0
+ 182:	a6 df       	rcall	.-180    	; 0xd0 <get_button>
+ 184:	01 97       	sbiw	r24, 0x01	; 1
+ 186:	71 f4       	brne	.+28     	; 0x1a4 <main+0x58>
+ 188:	60 ef       	ldi	r22, 0xF0	; 240
+			Music_Player(open_buzzer_Tune, (int*)open_buzzer_Beats);
+ 18a:	71 e0       	ldi	r23, 0x01	; 1
+ 18c:	8e e6       	ldi	r24, 0x6E	; 110
+ 18e:	91 e0       	ldi	r25, 0x01	; 1
+ 190:	2d d0       	rcall	.+90     	; 0x1ec <Music_Player>
+ 192:	2f ef       	ldi	r18, 0xFF	; 255
+ 194:	8a e6       	ldi	r24, 0x6A	; 106
+ 196:	93 e0       	ldi	r25, 0x03	; 3
+ 198:	21 50       	subi	r18, 0x01	; 1
+ 19a:	80 40       	sbci	r24, 0x00	; 0
+ 19c:	90 40       	sbci	r25, 0x00	; 0
+ 19e:	e1 f7       	brne	.-8      	; 0x198 <main+0x4c>
+ 1a0:	00 c0       	rjmp	.+0      	; 0x1a2 <main+0x56>
+ 1a2:	00 00       	nop
+ 1a4:	65 e0       	ldi	r22, 0x05	; 5
+			_delay_ms(70);
+		}
+		
+		// btn3ÏùÑ ÎàÑÎ•¥Î©¥ 3Î≤à ÎèôÏûë
+		if(get_button(BUTTON2, BUTTON2PIN) == BUTTON_PRESS) {
+ 1a6:	70 e0       	ldi	r23, 0x00	; 0
+ 1a8:	82 e0       	ldi	r24, 0x02	; 2
+ 1aa:	90 e0       	ldi	r25, 0x00	; 0
+ 1ac:	91 df       	rcall	.-222    	; 0xd0 <get_button>
+ 1ae:	01 97       	sbiw	r24, 0x01	; 1
+ 1b0:	79 f6       	brne	.-98     	; 0x150 <main+0x4>
+ 1b2:	62 e8       	ldi	r22, 0x82	; 130
+			Music_Player(drum_waching_stop_melody_Tune, (int*)drum_waching_stop_melody_Beats);
+ 1b4:	71 e0       	ldi	r23, 0x01	; 1
+ 1b6:	80 e0       	ldi	r24, 0x00	; 0
+ 1b8:	91 e0       	ldi	r25, 0x01	; 1
+ 1ba:	18 d0       	rcall	.+48     	; 0x1ec <Music_Player>
+ 1bc:	2f ef       	ldi	r18, 0xFF	; 255
+ 1be:	8a e6       	ldi	r24, 0x6A	; 106
+ 1c0:	93 e0       	ldi	r25, 0x03	; 3
+ 1c2:	21 50       	subi	r18, 0x01	; 1
+ 1c4:	80 40       	sbci	r24, 0x00	; 0
+ 1c6:	90 40       	sbci	r25, 0x00	; 0
+ 1c8:	e1 f7       	brne	.-8      	; 0x1c2 <main+0x76>
+ 1ca:	00 c0       	rjmp	.+0      	; 0x1cc <main+0x80>
+ 1cc:	00 00       	nop
+ 1ce:	c0 cf       	rjmp	.-128    	; 0x150 <main+0x4>
+
+000001d0 <delay_ms>:
+	BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_4, BEAT_1_8,
+	BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_8, BEAT_1_2
+};
+void delay_ms(int ms)
+{
+	while(ms-- != 0)_delay_ms(1);
+ 1d0:	07 c0       	rjmp	.+14     	; 0x1e0 <delay_ms+0x10>
+ 1d2:	8f e9       	ldi	r24, 0x9F	; 159
+ 1d4:	9f e0       	ldi	r25, 0x0F	; 15
+ 1d6:	01 97       	sbiw	r24, 0x01	; 1
+ 1d8:	f1 f7       	brne	.-4      	; 0x1d6 <delay_ms+0x6>
+ 1da:	00 c0       	rjmp	.+0      	; 0x1dc <delay_ms+0xc>
+ 1dc:	00 00       	nop
+ 1de:	c9 01       	movw	r24, r18
+ 1e0:	9c 01       	movw	r18, r24
+ 1e2:	21 50       	subi	r18, 0x01	; 1
+ 1e4:	31 09       	sbc	r19, r1
+ 1e6:	89 2b       	or	r24, r25
+ 1e8:	a1 f7       	brne	.-24     	; 0x1d2 <delay_ms+0x2>
+}
+ 1ea:	08 95       	ret
+
+000001ec <Music_Player>:
+
+void Music_Player(int *tone, int *Beats)
+{
+ 1ec:	ef 92       	push	r14
+ 1ee:	ff 92       	push	r15
+ 1f0:	0f 93       	push	r16
+ 1f2:	1f 93       	push	r17
+ 1f4:	cf 93       	push	r28
+ 1f6:	df 93       	push	r29
+ 1f8:	ec 01       	movw	r28, r24
+ 1fa:	7b 01       	movw	r14, r22
+	while(*tone != 0)
+ 1fc:	14 c0       	rjmp	.+40     	; 0x226 <Music_Player+0x3a>
+	{
+		OCR3A = *tone;
+ 1fe:	06 e8       	ldi	r16, 0x86	; 134
+ 200:	10 e0       	ldi	r17, 0x00	; 0
+ 202:	f8 01       	movw	r30, r16
+ 204:	91 83       	std	Z+1, r25	; 0x01
+ 206:	80 83       	st	Z, r24
+		delay_ms(*Beats);
+ 208:	f7 01       	movw	r30, r14
+ 20a:	81 91       	ld	r24, Z+
+ 20c:	91 91       	ld	r25, Z+
+ 20e:	7f 01       	movw	r14, r30
+ 210:	df df       	rcall	.-66     	; 0x1d0 <delay_ms>
+		tone++;
+ 212:	22 96       	adiw	r28, 0x02	; 2
+		Beats++;
+		OCR3A = 0;
+ 214:	f8 01       	movw	r30, r16
+ 216:	11 82       	std	Z+1, r1	; 0x01
+ 218:	10 82       	st	Z, r1
+ 21a:	8f e3       	ldi	r24, 0x3F	; 63
+ 21c:	9c e9       	ldi	r25, 0x9C	; 156
+ 21e:	01 97       	sbiw	r24, 0x01	; 1
+ 220:	f1 f7       	brne	.-4      	; 0x21e <Music_Player+0x32>
+ 222:	00 c0       	rjmp	.+0      	; 0x224 <Music_Player+0x38>
+ 224:	00 00       	nop
+	while(ms-- != 0)_delay_ms(1);
+}
+
+void Music_Player(int *tone, int *Beats)
+{
+	while(*tone != 0)
+ 226:	88 81       	ld	r24, Y
+ 228:	99 81       	ldd	r25, Y+1	; 0x01
+ 22a:	00 97       	sbiw	r24, 0x00	; 0
+ 22c:	41 f7       	brne	.-48     	; 0x1fe <Music_Player+0x12>
+		Beats++;
+		OCR3A = 0;
+		_delay_ms(10);		
+	}
+	return;
+}  
+ 22e:	df 91       	pop	r29
+ 230:	cf 91       	pop	r28
+ 232:	1f 91       	pop	r17
+ 234:	0f 91       	pop	r16
+ 236:	ff 90       	pop	r15
+ 238:	ef 90       	pop	r14
+ 23a:	08 95       	ret
+
+0000023c <init_speaker>:
+// Timer3 ¿ßªÛ±≥¡§ PWM
+void init_speaker(void)
+{
+	DDRE |= 0x08;   // PWM CHANNEL  OC3A(PE3) √‚∑¬ ∏µÂ∑Œ º≥¡§ «—¥Ÿ. 
+ 23c:	82 b1       	in	r24, 0x02	; 2
+ 23e:	88 60       	ori	r24, 0x08	; 8
+ 240:	82 b9       	out	0x02, r24	; 2
+	TCCR3A = (1<<COM3A0); // COM3A0 : ∫Ò±≥¿œƒ°Ω√ PE3 √‚∑¬ π›¿¸ (P328 «•14-6 ¬¸∞Ì)
+ 242:	80 e4       	ldi	r24, 0x40	; 64
+ 244:	80 93 8b 00 	sts	0x008B, r24	; 0x80008b <__TEXT_REGION_LENGTH__+0x7e008b>
+	TCCR3B = (1<<WGM32) | (1<<CS31);   // WGM32 : CTC 4(P327 «•14-5) CS31: 8∫–¡÷(P318)
+ 248:	8a e0       	ldi	r24, 0x0A	; 10
+ 24a:	80 93 8a 00 	sts	0x008A, r24	; 0x80008a <__TEXT_REGION_LENGTH__+0x7e008a>
+	// - BOTTOM :  ƒ´øÓ≈Õ∞° 0x00/0x0000 ¿œ∂ß∏¶ ∞°∏Æ≈≤¥Ÿ.
+    // - MAX : ƒ´øÓ≈Õ∞° 0xFF/0xFFFF ¿œ ∂ß∏¶ ∞°∏Æ≈≤¥Ÿ.
+    // - TOP?:  ƒ´øÓ≈Õ∞° ∞°¡˙ ºˆ ¿÷¥¬ √÷¥Î∞™¿ª ∞°∏Æ≈≤¥Ÿ. ø¿πˆ«√∑ŒøÏ ¿Œ≈Õ∑¥∆Æ¿« ∞ÊøÏ TOP¿∫ 0xFF/0xFFFF
+    //          ¿Ã¡ˆ∏∏ ∫Ò±≥¿œƒ° ¿Œ≈Õ∑¥∆Æ¿« ∞ÊøÏ ªÁøÎ¿⁄∞° º≥¡§«— ∞™¿Ã µ»¥Ÿ. 
+    
+	TCCR3C = 0;  // P328 ±◊∏≤ 14-11 ¬¸∞Ì 
+ 24e:	10 92 8c 00 	sts	0x008C, r1	; 0x80008c <__TEXT_REGION_LENGTH__+0x7e008c>
+	OCR3A = 0;   // ∫Ò±≥ ¿œƒ°∞™¿ª OCR3Aø° ≥÷¥¬¥Ÿ. 
+ 252:	10 92 87 00 	sts	0x0087, r1	; 0x800087 <__TEXT_REGION_LENGTH__+0x7e0087>
+ 256:	10 92 86 00 	sts	0x0086, r1	; 0x800086 <__TEXT_REGION_LENGTH__+0x7e0086>
+ 25a:	08 95       	ret
+
+0000025c <_exit>:
+ 25c:	f8 94       	cli
+
+0000025e <__stop_program>:
+ 25e:	ff cf       	rjmp	.-2      	; 0x25e <__stop_program>

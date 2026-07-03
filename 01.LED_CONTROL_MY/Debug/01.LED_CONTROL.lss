@@ -1,0 +1,374 @@
+
+01.LED_CONTROL.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000022a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001b6  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  00800100  00800100  0000022a  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000022a  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000025c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000098  00000000  00000000  0000029c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000ba9  00000000  00000000  00000334  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000092b  00000000  00000000  00000edd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000004be  00000000  00000000  00001808  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000dc  00000000  00000000  00001cc8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004c4  00000000  00000000  00001da4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000019c  00000000  00000000  00002268  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000068  00000000  00000000  00002404  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	53 c0       	rjmp	.+166    	; 0xac <__bad_interrupt>
+   6:	00 00       	nop
+   8:	51 c0       	rjmp	.+162    	; 0xac <__bad_interrupt>
+   a:	00 00       	nop
+   c:	4f c0       	rjmp	.+158    	; 0xac <__bad_interrupt>
+   e:	00 00       	nop
+  10:	4d c0       	rjmp	.+154    	; 0xac <__bad_interrupt>
+  12:	00 00       	nop
+  14:	4b c0       	rjmp	.+150    	; 0xac <__bad_interrupt>
+  16:	00 00       	nop
+  18:	49 c0       	rjmp	.+146    	; 0xac <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	47 c0       	rjmp	.+142    	; 0xac <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	45 c0       	rjmp	.+138    	; 0xac <__bad_interrupt>
+  22:	00 00       	nop
+  24:	43 c0       	rjmp	.+134    	; 0xac <__bad_interrupt>
+  26:	00 00       	nop
+  28:	41 c0       	rjmp	.+130    	; 0xac <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	3f c0       	rjmp	.+126    	; 0xac <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	3d c0       	rjmp	.+122    	; 0xac <__bad_interrupt>
+  32:	00 00       	nop
+  34:	3b c0       	rjmp	.+118    	; 0xac <__bad_interrupt>
+  36:	00 00       	nop
+  38:	39 c0       	rjmp	.+114    	; 0xac <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	37 c0       	rjmp	.+110    	; 0xac <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	35 c0       	rjmp	.+106    	; 0xac <__bad_interrupt>
+  42:	00 00       	nop
+  44:	33 c0       	rjmp	.+102    	; 0xac <__bad_interrupt>
+  46:	00 00       	nop
+  48:	31 c0       	rjmp	.+98     	; 0xac <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	2f c0       	rjmp	.+94     	; 0xac <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	2d c0       	rjmp	.+90     	; 0xac <__bad_interrupt>
+  52:	00 00       	nop
+  54:	2b c0       	rjmp	.+86     	; 0xac <__bad_interrupt>
+  56:	00 00       	nop
+  58:	29 c0       	rjmp	.+82     	; 0xac <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	27 c0       	rjmp	.+78     	; 0xac <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	25 c0       	rjmp	.+74     	; 0xac <__bad_interrupt>
+  62:	00 00       	nop
+  64:	23 c0       	rjmp	.+70     	; 0xac <__bad_interrupt>
+  66:	00 00       	nop
+  68:	21 c0       	rjmp	.+66     	; 0xac <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	1f c0       	rjmp	.+62     	; 0xac <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	1d c0       	rjmp	.+58     	; 0xac <__bad_interrupt>
+  72:	00 00       	nop
+  74:	1b c0       	rjmp	.+54     	; 0xac <__bad_interrupt>
+  76:	00 00       	nop
+  78:	19 c0       	rjmp	.+50     	; 0xac <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	17 c0       	rjmp	.+46     	; 0xac <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	15 c0       	rjmp	.+42     	; 0xac <__bad_interrupt>
+  82:	00 00       	nop
+  84:	13 c0       	rjmp	.+38     	; 0xac <__bad_interrupt>
+  86:	00 00       	nop
+  88:	11 c0       	rjmp	.+34     	; 0xac <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_clear_bss>:
+  98:	21 e0       	ldi	r18, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	01 c0       	rjmp	.+2      	; 0xa2 <.do_clear_bss_start>
+
+000000a0 <.do_clear_bss_loop>:
+  a0:	1d 92       	st	X+, r1
+
+000000a2 <.do_clear_bss_start>:
+  a2:	a4 30       	cpi	r26, 0x04	; 4
+  a4:	b2 07       	cpc	r27, r18
+  a6:	e1 f7       	brne	.-8      	; 0xa0 <.do_clear_bss_loop>
+  a8:	54 d0       	rcall	.+168    	; 0x152 <main>
+  aa:	83 c0       	rjmp	.+262    	; 0x1b2 <_exit>
+
+000000ac <__bad_interrupt>:
+  ac:	a9 cf       	rjmp	.-174    	; 0x0 <__vectors>
+
+000000ae <init_button>:
+int get_button(int button_num, int button_pin);
+
+// PORTD 3,4,5,6 reset => 버튼 초기화 방향 설정(입력)
+void init_button(void)
+{
+	BUTTON_DDR &= ~(1 << BUTTON0PIN | 1 << BUTTON1PIN | 1 << BUTTON2PIN | 1 << BUTTON3PIN);
+  ae:	81 b3       	in	r24, 0x11	; 17
+  b0:	87 78       	andi	r24, 0x87	; 135
+  b2:	81 bb       	out	0x11, r24	; 17
+  b4:	08 95       	ret
+
+000000b6 <get_button>:
+		BUTTON_RELEASE,BUTTON_RELEASE,BUTTON_RELEASE,BUTTON_RELEASE
+	};
+	// 지역변수에 static을 선언하면 함수를 빠져나와 다시 들어가도 이전값 유지
+	int current_state;
+	// 1. button을 읽는다.
+	current_state = BUTTON_PIN & (1 << button_pin); // 현재상태가 눌린상태면 1 안눌린상태면 0
+  b6:	20 b3       	in	r18, 0x10	; 16
+  b8:	42 2f       	mov	r20, r18
+  ba:	50 e0       	ldi	r21, 0x00	; 0
+  bc:	21 e0       	ldi	r18, 0x01	; 1
+  be:	30 e0       	ldi	r19, 0x00	; 0
+  c0:	02 c0       	rjmp	.+4      	; 0xc6 <get_button+0x10>
+  c2:	22 0f       	add	r18, r18
+  c4:	33 1f       	adc	r19, r19
+  c6:	6a 95       	dec	r22
+  c8:	e2 f7       	brpl	.-8      	; 0xc2 <get_button+0xc>
+  ca:	24 23       	and	r18, r20
+  cc:	35 23       	and	r19, r21
+	// 2. 버튼 상태 check
+	if(current_state && button_status[button_num] == BUTTON_RELEASE) //처음으로 꾹 누르기 시작한 그 1밀리초의 순간
+  ce:	21 15       	cp	r18, r1
+  d0:	31 05       	cpc	r19, r1
+  d2:	a1 f0       	breq	.+40     	; 0xfc <get_button+0x46>
+  d4:	fc 01       	movw	r30, r24
+  d6:	e0 50       	subi	r30, 0x00	; 0
+  d8:	ff 4f       	sbci	r31, 0xFF	; 255
+  da:	40 81       	ld	r20, Z
+  dc:	41 11       	cpse	r20, r1
+  de:	0e c0       	rjmp	.+28     	; 0xfc <get_button+0x46>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  e0:	ef e5       	ldi	r30, 0x5F	; 95
+  e2:	fa ee       	ldi	r31, 0xEA	; 234
+  e4:	31 97       	sbiw	r30, 0x01	; 1
+  e6:	f1 f7       	brne	.-4      	; 0xe4 <get_button+0x2e>
+  e8:	00 c0       	rjmp	.+0      	; 0xea <get_button+0x34>
+  ea:	00 00       	nop
+	{
+		_delay_ms(15); // noise가 지나가길 기다림
+		button_status[button_num] = BUTTON_PRESS;
+  ec:	fc 01       	movw	r30, r24
+  ee:	e0 50       	subi	r30, 0x00	; 0
+  f0:	ff 4f       	sbci	r31, 0xFF	; 255
+  f2:	21 e0       	ldi	r18, 0x01	; 1
+  f4:	20 83       	st	Z, r18
+		return 0; // 아직은 완전히 눌렀다 뗀 상태가 아니다.
+  f6:	80 e0       	ldi	r24, 0x00	; 0
+  f8:	90 e0       	ldi	r25, 0x00	; 0
+  fa:	08 95       	ret
+	}
+	else if(button_status[button_num] == BUTTON_PRESS && (current_state == 0))
+  fc:	fc 01       	movw	r30, r24
+  fe:	e0 50       	subi	r30, 0x00	; 0
+ 100:	ff 4f       	sbci	r31, 0xFF	; 255
+ 102:	40 81       	ld	r20, Z
+ 104:	41 30       	cpi	r20, 0x01	; 1
+ 106:	79 f4       	brne	.+30     	; 0x126 <get_button+0x70>
+ 108:	23 2b       	or	r18, r19
+ 10a:	81 f4       	brne	.+32     	; 0x12c <get_button+0x76>
+	{ // 버튼이 이전에 눌려진 상태였으며 지금은 떼어진 상태
+		button_status[button_num] = BUTTON_RELEASE; // 다음 버튼을 체크하기위하여 초기화
+ 10c:	fc 01       	movw	r30, r24
+ 10e:	e0 50       	subi	r30, 0x00	; 0
+ 110:	ff 4f       	sbci	r31, 0xFF	; 255
+ 112:	10 82       	st	Z, r1
+ 114:	8f e5       	ldi	r24, 0x5F	; 95
+ 116:	9a ee       	ldi	r25, 0xEA	; 234
+ 118:	01 97       	sbiw	r24, 0x01	; 1
+ 11a:	f1 f7       	brne	.-4      	; 0x118 <get_button+0x62>
+ 11c:	00 c0       	rjmp	.+0      	; 0x11e <get_button+0x68>
+ 11e:	00 00       	nop
+		_delay_ms(15); // noise가 지나가기를 기다린다.
+		return 1; // 완전히 1번 눌렀다 뗀 상태로 인정한다.
+ 120:	81 e0       	ldi	r24, 0x01	; 1
+ 122:	90 e0       	ldi	r25, 0x00	; 0
+ 124:	08 95       	ret
+	}
+	
+	return 0; // 버튼이 open 상태이다.
+ 126:	80 e0       	ldi	r24, 0x00	; 0
+ 128:	90 e0       	ldi	r25, 0x00	; 0
+ 12a:	08 95       	ret
+ 12c:	80 e0       	ldi	r24, 0x00	; 0
+ 12e:	90 e0       	ldi	r25, 0x00	; 0
+}
+ 130:	08 95       	ret
+
+00000132 <init_led>:
+	PORTA = 0x0f;
+}
+
+void led_left_on(void)
+{
+	PORTA = 0xf0;
+ 132:	8f ef       	ldi	r24, 0xFF	; 255
+ 134:	8a bb       	out	0x1a, r24	; 26
+ 136:	1b ba       	out	0x1b, r1	; 27
+ 138:	08 95       	ret
+
+0000013a <led_all_on>:
+ 13a:	8f ef       	ldi	r24, 0xFF	; 255
+ 13c:	8b bb       	out	0x1b, r24	; 27
+ 13e:	08 95       	ret
+
+00000140 <led_all_off>:
+ 140:	1b ba       	out	0x1b, r1	; 27
+ 142:	08 95       	ret
+
+00000144 <led_odd_on>:
+}
+
+void led_odd_on(void)
+{
+	PORTA = 0b10101010;
+ 144:	8a ea       	ldi	r24, 0xAA	; 170
+ 146:	8b bb       	out	0x1b, r24	; 27
+ 148:	08 95       	ret
+
+0000014a <led_even_on>:
+}
+
+void led_even_on(void)
+{
+	PORTA = PORTA >> 1;
+ 14a:	8b b3       	in	r24, 0x1b	; 27
+ 14c:	86 95       	lsr	r24
+ 14e:	8b bb       	out	0x1b, r24	; 27
+ 150:	08 95       	ret
+
+00000152 <main>:
+#if 1
+int main(void)
+{
+	int button0_state = 0; // 초기 상태를 led all off로 출발함.
+	// 버튼, led 초기화
+	init_button();
+ 152:	ad df       	rcall	.-166    	; 0xae <init_button>
+	init_led();
+ 154:	ee df       	rcall	.-36     	; 0x132 <init_led>
+ 156:	c0 e0       	ldi	r28, 0x00	; 0
+
+// even odd
+#if 1
+int main(void)
+{
+	int button0_state = 0; // 초기 상태를 led all off로 출발함.
+ 158:	d0 e0       	ldi	r29, 0x00	; 0
+ 15a:	66 e0       	ldi	r22, 0x06	; 6
+	init_button();
+	init_led();
+	
+	while(1)
+	{
+		if (get_button(BUTTON3, BUTTON3PIN))
+ 15c:	70 e0       	ldi	r23, 0x00	; 0
+ 15e:	83 e0       	ldi	r24, 0x03	; 3
+ 160:	90 e0       	ldi	r25, 0x00	; 0
+ 162:	a9 df       	rcall	.-174    	; 0xb6 <get_button>
+ 164:	89 2b       	or	r24, r25
+ 166:	21 f0       	breq	.+8      	; 0x170 <main+0x1e>
+		{
+			button0_state = 0;
+			led_all_off();
+ 168:	eb df       	rcall	.-42     	; 0x140 <led_all_off>
+ 16a:	c0 e0       	ldi	r28, 0x00	; 0
+	
+	while(1)
+	{
+		if (get_button(BUTTON3, BUTTON3PIN))
+		{
+			button0_state = 0;
+ 16c:	d0 e0       	ldi	r29, 0x00	; 0
+ 16e:	f5 cf       	rjmp	.-22     	; 0x15a <main+0x8>
+ 170:	63 e0       	ldi	r22, 0x03	; 3
+			led_all_off();
+		}
+		// get_button은 스위치를 누르면 실행되는 것..
+		else if (get_button(BUTTON0, BUTTON0PIN))
+ 172:	70 e0       	ldi	r23, 0x00	; 0
+ 174:	80 e0       	ldi	r24, 0x00	; 0
+ 176:	90 e0       	ldi	r25, 0x00	; 0
+ 178:	9e df       	rcall	.-196    	; 0xb6 <get_button>
+ 17a:	89 2b       	or	r24, r25
+ 17c:	71 f3       	breq	.-36     	; 0x15a <main+0x8>
+ 17e:	21 96       	adiw	r28, 0x01	; 1
+		{
+			button0_state++;
+ 180:	c3 70       	andi	r28, 0x03	; 3
+			button0_state = button0_state % 4; // 반전 0 <--> 1
+ 182:	d0 78       	andi	r29, 0x80	; 128
+ 184:	dd 23       	and	r29, r29
+ 186:	24 f4       	brge	.+8      	; 0x190 <main+0x3e>
+ 188:	21 97       	sbiw	r28, 0x01	; 1
+ 18a:	cc 6f       	ori	r28, 0xFC	; 252
+ 18c:	df 6f       	ori	r29, 0xFF	; 255
+ 18e:	21 96       	adiw	r28, 0x01	; 1
+			// 1이면 다킨다
+			if(button0_state == 1) led_all_on();
+ 190:	c1 30       	cpi	r28, 0x01	; 1
+ 192:	d1 05       	cpc	r29, r1
+ 194:	11 f4       	brne	.+4      	; 0x19a <main+0x48>
+ 196:	d1 df       	rcall	.-94     	; 0x13a <led_all_on>
+ 198:	e0 cf       	rjmp	.-64     	; 0x15a <main+0x8>
+			else if(button0_state == 2) led_odd_on();
+ 19a:	c2 30       	cpi	r28, 0x02	; 2
+ 19c:	d1 05       	cpc	r29, r1
+ 19e:	11 f4       	brne	.+4      	; 0x1a4 <main+0x52>
+ 1a0:	d1 df       	rcall	.-94     	; 0x144 <led_odd_on>
+			else if(button0_state == 3) led_even_on();
+ 1a2:	db cf       	rjmp	.-74     	; 0x15a <main+0x8>
+ 1a4:	c3 30       	cpi	r28, 0x03	; 3
+ 1a6:	d1 05       	cpc	r29, r1
+ 1a8:	11 f4       	brne	.+4      	; 0x1ae <main+0x5c>
+ 1aa:	cf df       	rcall	.-98     	; 0x14a <led_even_on>
+ 1ac:	d6 cf       	rjmp	.-84     	; 0x15a <main+0x8>
+			else led_all_off();
+ 1ae:	c8 df       	rcall	.-112    	; 0x140 <led_all_off>
+ 1b0:	d4 cf       	rjmp	.-88     	; 0x15a <main+0x8>
+
+000001b2 <_exit>:
+ 1b2:	f8 94       	cli
+
+000001b4 <__stop_program>:
+ 1b4:	ff cf       	rjmp	.-2      	; 0x1b4 <__stop_program>

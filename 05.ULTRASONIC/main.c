@@ -1,0 +1,78 @@
+/*
+ * 04. UART.c
+ *
+ * Created: 2026-06-15 오전 11:37:00
+ * Author : kccistc
+ */ 
+
+#define F_CPU 16000000UL
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h> // sei 등 함수
+#include <stdio.h>
+
+extern int led_main(void);
+extern void init_uart0(void);
+extern void UART0_transmit(uint8_t data);
+extern void pc_command_processing(void);
+extern void init_ultrasonic();
+extern void ultrasonic_processing(void);
+
+
+FILE OUTPUT = FDEV_SETUP_STREAM(UART0_transmit, NULL, _FDEV_SETUP_WRITE);
+
+volatile uint32_t msec_count = 0; // volatile 최적화 방지
+volatile int ultrasonic_check_time = 0;
+/*
+ISR (Interrupt Service Routine) : 인터럽트 처리 함수 ISR로 시작
+TIMER0_OVF_vect : Timer 0 Overlow INT가 발생이되면 이곳을로 진입함
+250개의 펄스를 count(lms)하면 이곳으로 자동 진입한다.
+ISR은 가능한 짧게 작성한다. => 1ms마다 인터럽트를 호출하는데 그 안에 pritnf함수같은거 넣으면 1ms이상 걸리기 때문..
+*/
+
+ISR(TIMER0_OVF_vect)
+{
+	TCNT0 = 6; // TCNT0 6~256 : 250개 펄스 count함.
+	msec_count++; // 1ms count
+	ultrasonic_check_time++;
+}
+
+int main(void)
+{
+	init_led();
+	init_timer0();
+	init_uart0();
+	init_ultrasonic();
+	
+	stdout = &OUTPUT; // printf가 동작할수 있도록 stdout을 설정
+	sei(); // 전역(대문) interrupt 허용
+	//led_main();
+    while (1)
+    {
+		//pc_command_processing();
+		ultrasonic_processing();
+	}
+}
+/*
+1. timer 0을 초기화 한다.
+   AVR에서 8bit timer 0/2 0번을 초기화 한다.
+   임베디드에서 가장 신경을 써야할 부분이 초기화 하는 것.
+   초기화가 잘못되면 이후가 다 꼬이게됨.
+2. 8bit가지고 1ms를 측정하는 timer/counter
+2.1 분주비 설정 (64분주)
+   16000000Hz / 64 ==> 250000Hz
+2.2 1주기가 잡아먹는 시간 계산
+   T = 1/f = 1/250000 ==> 0.000004sec ==> (4us) ==> 0.004ms
+2.3 8bit 가지고 count하는 시간을 계산 (8bit timer overflow)
+   0.004ms x 256개 => 1.024ms
+   0.004ms x 250개 => 1.000ms
+
+*/
+void init_timer0(void)
+{
+	TCNT0 = 6; // TCNT0 6~256 : 250개 펄스 count함.
+	TCCR0 &= ~(1 << CS02 | 1 << CS01 | 1 << CS00); // 초기화
+	TCCR0 |= 1 << CS02 | 0 << CS01 | 0 << CS00; // 64분주
+	TIMSK |= 1 << TOIE0; // TIMER0 Overflow interrupt
+}
+
