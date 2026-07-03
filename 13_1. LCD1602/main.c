@@ -59,7 +59,7 @@ int main(void)
 	uint8_t data[] = {0, 20, 11, 5, 2, 7, 26};
 	printf("* Setting RTC module...\r\n");
 	
-	// RTC 모듈에 시간 설정
+	// RTC 모듈에 시간 설정한다.
 	I2C_start();                           // I2C 시작
 	I2C_transmit(address << 1);            // I2C 주소 전송, 쓰기 모드
 	// RTC에 데이터를 기록할 메모리 시작 주소 전송
